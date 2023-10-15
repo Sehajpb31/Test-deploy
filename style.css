@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/sehaj.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 0.5s; /* Smooth background transition */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: 20px auto; /* Increased margin for better spacing on mobile */
+    padding: 20px;
+    overflow: hidden;
+    font-weight: 500;
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth background and box-shadow transitions */
+}
+
+/* Add CSS for the collapsible container */
+.container {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background 0.3s, border 0.3s; /* Smooth background and border transitions */
+}
+
+/* Style the label when hovering over it */
+label[for="container-head"]:hover {
+    background-color: #555;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+/* Style the label when the checkbox is checked */
+.container-head:checked + label[for="container-head"] {
+    background-color: #555;
+    transition: background 0.3s;
+}
+
+/* Style the content when the checkbox is checked */
+.container-head:checked + label[for="container-head"] + .containter-text {
+    max-height: 1000px; /* Set a sufficiently large max-height for the transition effect */
+    opacity: 1;
+    transition: max-height 0.3s, opacity 0.3s; /* Smooth transitions */
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+    background-color: #3498db;
+    padding: 20px 0;
+    transition-duration: 0.5s;
+    border-bottom: 5px solid #3e82bc; /* Add a border to the header */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to the profile picture */
+    transition: box-shadow 0.3s; /* Smooth box-shadow transition */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Add a hover effect for project sections */
+.project:hover {
+    background-color: #eaeaea;
+    transition: background 0.3s;
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+@media (max-width: 600px) {
+    /* Mobile styles */
+    .container {
+        width: 95%; /* Adjusted width for smaller screens */
+    }
+
+    .header img {
+        width: 150px; /* Smaller profile picture for mobile */
+        height: 150px;
+    }
+}
+/* Add some basic styling */
+.slider-container {
+    width: 100%;
+    height: 100px; /* Adjust the height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-text {
+    white-space: nowrap;
+    animation: slide 10s linear infinite; /* Change the duration as needed */
+    
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start from the right edge */
+    color: darkblue
+}
+
+.slide {
+    display: inline-block;
+    margin: 10px;
+}
+
+@keyframes slide {
+    0% {
+        left: 100%; /* Start from the right edge */
+    }
+    100% {
+        left: -100%; /* Slide to the left edge */
+    }
+}
